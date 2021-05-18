@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html class="ie7" lang="zh">
+
+<html lang="zh">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="total" style="width: 80%;padding-left:10%">
+    <div class="wrapper">
+        <h1><input type="image" src="images/logo.PNG"> </h1>
+        <div class="right1">
+            <div class="wrapper">
+                <form id="search" action="" method="post">
+                    <div class="bg">
+                        <input type="submit" class="submit" value="">
+                        <input type="text" class="input" placeholder="请输入你想搜索的内容···">
+                    </div>
+                </form>
+            </div>
+            <div class="wrapper">
+                <nav>
+                    <ul id="top_nav1">
+                        <li><a href="#" class="tc">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">帮助</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+<nav>
+    <ul id="menu">
+        <li><a href="index.html" class="nav1">首页</a></li>
+        <li><a href="yiquan.html" class="nav2">易圈</a></li>
+        <li><a href="Message.html" class="nav3">消息</a></li>
+        <li><a href="my.html" class="nav4">我的</a></li>
+        <li class="end"><a href="contact.html" class="nav5">关于我们</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div class="wrapper">
+        <div class="light"><i></i></div>
+        <hr class="line-left">
+        <hr class="line-right">
+        <div class="main">
+            <h1 class="title">“愿易”小组的工作流程</h1>
+            <div class="year">
+                <h2><a href="#">2017.03.24<i></i></a></h2>
+                <div class="list">
+                    <ul>
+
+
+                        <li class="cls highlight">
+                            <p class="date">完成工作</p>
+                            <p class="intro">完成了主页面的代码</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>&nbsp;</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="year">
+                <h2><a href="#">2017.03.16<i></i></a></h2>
+                <div class="list">
+                    <ul>
+                        <li class="cls">
+                            <p class="date">&nbsp;</p>
+                            <p class="intro">汇报工作</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>上台讲解需求分析报告书</p>
+                            </div>
+                        </li>
+                        <li class="cls highlight">
+                            <p class="date">完成工作</p>
+                            <p class="intro">完成需求分析报告书</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>&nbsp;</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="year">
+                <h2><a href="#">2017.03.13<i></i></a></h2>
+                <div class="list">
+                    <ul>
+                        <li class="cls">
+                            <p class="date">&nbsp;</p>
+                            <p class="intro">开始进行工作</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>网站的主页原型设计图</p>
+                            </div>
+                        </li>
+
+                        <li class="cls highlight">
+                            <p class="date">&nbsp;</p>
+                            <p class="intro">确定形式</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>确定做网站，“愿易”为心愿交易</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="year">
+                <h2><a href="#">2017.03.12<i></i></a></h2>
+                <div class="list">
+                    <ul>
+                        <li class="cls">
+                            <p class="date">上课</p>
+                            <p class="intro">成立</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p>成立“愿易”小组</p>
+                            </div>
+                        </li>
+                        <li class="cls">
+                            <p class="date">晚上</p>
+                            <p class="intro">讨论做的主题和形式</p>
+                            <p class="version">&nbsp;</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="year">
+                <h2><a href="#">2017.03.03<i></i></a></h2>
+                <div class="list">
+                    <ul>
+                        <li class="cls">
+                            <p class="date">&nbsp;</p>
+                            <p class="intro">开始布置任务，刚接触“Team@OSC团队协作开发平台”</p>
+                            <p class="version">&nbsp;</p>
+                            <div class="more">
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <hr/>
+ <footer style="text-align:center;color:#808080">
+        <br/>
+        客服电话：020-11111111 举报电话：81111111 客服邮箱：yy@yuanyi.com
+        <br/>
+        版权所有：愿易小组  2017-2018     京ICP备1440624000号
+</footer>
+<script>
+    $(".main .year .list").each(function (e, target) {
+        var $target=  $(target),
+                $ul = $target.find("ul");
+        $target.height($ul.outerHeight()), $ul.css("position", "absolute");
+    });
+    $(".main .year>h2>a").click(function (e) {
+        e.preventDefault();
+        $(this).parents(".year").toggleClass("close");
+    });
+
+
+</script>
+</div>
+</body>
+</html>

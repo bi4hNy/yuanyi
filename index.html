@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/gotop.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+
+</head>
+<body>
+<div class="total" style="width: 80%;padding-left:10%">
+<div class="wrapper">
+    <h1><input type="image" src="images/logo.PNG"> </h1>
+    <div class="right1">
+        <div class="wrapper">
+            <form id="search" action="" method="post">
+                <div class="bg">
+                    <input type="submit" class="submit" value="">
+                    <input type="text" class="input" placeholder="请输入你想搜索的内容···">
+                </div>
+            </form>
+        </div>
+        <div class="wrapper">
+            <nav>
+                <ul id="top_nav1">
+                    <li><a href="#" class="tc">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+    <!--登录页面-->
+    <div id="gray"></div>
+
+    <div class="popup" id="popup">
+
+        <div class="top_nav" id='top_nav'>
+            <div align="center">
+                <i></i>
+                <span>登录账号</span>
+                <a class="guanbi"></a>
+            </div>
+        </div>
+
+        <div class="min">
+
+            <div class="tc_login">
+
+                <div class="left">
+                    <h4 align="center">愿易</h4>
+                    <div align="center"><img src="images/zfb_2yuan.jpg" width="150" height="150" /></div>
+                    <dd>
+                        <div align="center">
+                            欢迎关注
+                            <span style="font-family: 'microsoft yahei'; color: #F60; font-size: 18px;">
+                                小易
+                            </span>
+                            为你服务
+                        </div>
+                    </dd>
+                </div>
+
+                <div class="right">
+                    <form method="POST" name="form_login" target="_top">
+                        <div align="center">
+                            <a href="">短信快捷登录</a>
+                            <i class="icon-mobile-phone"></i>
+                            <input type="text" name="name" id="name" required placeholder="用户名" autocomplete="off" class="input_yh">
+                            <input type="password" name="pass" id="pass" required placeholder="密码" autocomplete="off" class="input_mm">
+                        </div>
+                        <!--
+                        <dd>
+                            <div align="center"><a href="">遇到登录问题</a></div>
+                        </dd>
+                        -->
+                        <div align="center">
+                            <input type="submit" class="button" title="Sign In" value="登录">
+                        </div>
+                    </form>
+                    <!--
+                    <dd>
+                        <div align="center"><a href="#" target="_blank">立即注册</a></div>
+                    </dd>
+                    -->
+                    <hr align="center" />
+                    <div align="center">期待为您服务 </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!--登录页面end-->
+
+<nav>
+    <ul id="menu">
+        <li><a href="index.html" class="nav1">首页</a></li>
+        <li><a href="yiquan.html" class="nav2">易圈</a></li>
+        <li><a href="Message.html" class="nav3">消息</a></li>
+        <li><a href="my.html" class="nav4">我的</a></li>
+        <li class="end"><a href="contact.html" class="nav5">关于我们</a></li>
+    </ul>
+</nav>
+
+
+    <!--轮播图--开始-->
+    <div class="bnr" id="home">
+        <div  id="top" class="callbacks_container">
+            <ul class="rslides" id="slider4">
+                <li>
+                    <div class="banner">
+                    </div>
+                </li>
+                <li>
+                    <div class="banner1">
+                    </div>
+                </li>
+                <li>
+                    <div class="banner2">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播图-结束-->
+
+    <!--轮播图滚动-->
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 4
+            $("#slider4").responsiveSlides({
+                auto: true,
+                pager: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                before: function () {
+                    $('.events').append("<li>before event fired.</li>");
+                },
+                after: function () {
+                    $('.events').append("<li>after event fired.</li>");
+                }
+            });
+
+        });
+        <!--轮播图滚动--ends-->
+
+     <!--登录-->
+        //窗口效果
+        //点击登录class为tc 显示
+        $(".tc").click(function(){
+            $("#gray").show();
+            $("#popup").show();//查找ID为popup的DIV show()显示#gray
+            tc_center();
+        });
+        //点击关闭按钮
+        $("a.guanbi").click(function(){
+            $("#gray").hide();
+            $("#popup").hide();//查找ID为popup的DIV hide()隐藏
+        })
+
+        //窗口水平居中
+        $(window).resize(function(){
+            tc_center();
+        });
+
+        function tc_center(){
+            var _top=($(window).height()-$(".popup").height())/2;
+            var _left=($(window).width()-$(".popup").width())/2;
+
+            $(".popup").css({top:_top,left:_left});
+        }
+
+        $(document).ready(function(){
+
+            $(".top_nav").mousedown(function(e){
+                $(this).css("cursor","move");//改变鼠标指针的形状
+                var offset = $(this).offset();//DIV在页面的位置
+                var x = e.pageX - offset.left;//获得鼠标指针离DIV元素左边界的距离
+                var y = e.pageY - offset.top;//获得鼠标指针离DIV元素上边界的距离
+                $(document).bind("mousemove",function(ev){ //绑定鼠标的移动事件，因为光标在DIV元素外面也要有效果，所以要用doucment的事件，而不用DIV元素的事件
+
+                    $(".popup").stop();//加上这个之后
+
+                    var _x = ev.pageX - x;//获得X轴方向移动的值
+                    var _y = ev.pageY - y;//获得Y轴方向移动的值
+
+                    $(".popup").animate({left:_x+"px",top:_y+"px"},10);
+                });
+
+            });
+
+            $(document).mouseup(function() {
+                $(".popup").css("cursor","default");
+                $(this).unbind("mousemove");
+            });
+        })
+
+    </script>
+
+
+<div id="wenzhang">
+<div id="hot_point">
+    热门
+</div>
+    <hr/>
+<div class="article1" onclick="window.open('http://www.baidu.com')">
+    <!--可以直接输入某个html，应该是同个目录下就会跳转的，到时在这里尝试下-->
+
+    <!--左边图片右边文字-->
+    <div id="article1_text">名称:DIY小清新花盆
+        <br>
+        <br>
+        <p>介绍:
+            hello，这是我自己弄的一个小花盆，以易拉罐为原材料，加上手工绘画，相信挂在你的书房或卧室会增加一丝文艺范儿，喜欢的快点赞收藏吧!
+        </p>
+        <br>
+        <br>
+        <p>交换条件:我想借一本《浮生绘》两个星期，愿意的小伙伴快来跟我交换吧!
+        </p>
+    </div>
+
+    <div class="thing_border" id="thing_border1">
+    </div>
+</div>
+
+    <div class="article2" onclick="window.open('http://www.baidu.com')">
+        <!--左边图片右边文字-->
+        <div id="article2_text">文章的文字放这里</div>
+
+        <div class="thing_border" id="thing_border2">
+            <!--
+            <input type="image" src="images/thing2.jpg" id='art_img2' width="500px" height="400px">
+        -->
+        </div>
+    </div>
+    <div class="article3" onclick="window.open('http://www.baidu.com')">
+        <!--左边图片右边文字-->
+        <div id="article3_text">文章的文字放这里</div>
+
+        <div class="thing_border" id="thing_border3">
+        </div>
+    </div>
+</div>
+
+    <!-- 微信二维码和返回顶部（开始） -->
+    <div id="code"></div>
+    <div id="code_img"></div>
+    <a id="gotop" href="javascript:void(0)"></a>
+    <!-- 微信二维码和返回顶部（结束） -->
+
+    <br/>
+    <hr/>
+<footer style="text-align:center;color:#808080">
+    <br/>
+    客服电话：020-11111111 举报电话：81111111 客服邮箱：yy@yuanyi.com
+    <br/>
+    版权所有：愿易小组  2017-2018     京ICP备1440624000号
+</footer>
+</div>
+
+</body>
+</html>
