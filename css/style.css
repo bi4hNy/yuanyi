@@ -26,7 +26,7 @@ body {background:url('../images/bg.png') top center repeat;border:0;font:13px Ar
 .nav2 {background: #afcf80;margin-left: 22px;}
 .nav3 {background: #f0c46f;margin-left: 22px;}
 .nav4 {background: #ba92b8;margin-left: 22px;}
-.nav5 {background:#30b6c9;margin-left: 22px;}
+.nav5 {background: #58bcc9;margin-left: 22px;}
 
 
 #cyt{
@@ -606,18 +606,20 @@ hr {
 #mine-left
 {
     float: left;
+
 }
 #mine-left-nav
 {
-    border: 2px black solid;
+
     width: 120px;
     height: 180px;
+
 }
 .mine-div
 {
     width:700px;
     height:150px;
-    border: 2px black dashed;
+
 }
 #mine-med
 {
@@ -630,6 +632,14 @@ hr {
     border: 2px black solid;
     width: 220px;
     height: 300px;
+    text-align: center;
+    font-size: 18px;
+}
+#mine-right-xia
+{
+    border: 2px black solid;
+    width: 220px;
+    height: 100px;
     text-align: center;
     font-size: 18px;
 }
@@ -654,6 +664,7 @@ hr {
     padding: 5px;
     text-align: center;
     line-height: 30px;
+    border-radius: 15px;
 }
 #mine-footer
 {
@@ -805,3 +816,78 @@ body .fn-hide {
 #club .modle .modle_con .modle_text{width:337px;height:60px;overflow:hidden;margin-top:15px;padding-left:8px;}
 #club .modle .modle_con .modle_text p a{color:#005ea7;}
 #club .modle .modle_con .modle_text div a{color:#999999;}
+
+
+
+/*·¢²¼*/
+.main{
+    width: 800px;
+    margin:0px auto;
+}
+span{
+    display: inline-block;
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    vertical-align: center;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.tag{
+    font-size: 13px;
+    margin-left: 320px;
+    vertical-align: bottom;
+    text-align: center;
+    margin-bottom: 0;
+}
+.text{
+    width: 670px;
+    height: 130px;
+    margin-left:15px;
+    resize:none;
+}
+
+#ipt{
+    display: inline-block;
+    width: 80px;
+    height: 50px;
+    background: #E2526F;
+    border: 0;
+    margin-left: 600px;
+    margin-top: 7px;
+}
+#txt{
+    font-size: 20px;
+}
+.creatediv{
+    width: 600px;
+    height: 80px;
+    border: 1px solid gray;
+    position: relative;
+    margin-top: 10px;
+    margin-left:10px;
+    padding-left: 75px;
+}
+.createinput{
+    width: 80px;
+    height: 30px;
+    position:absolute;
+    right: 5px;
+    bottom:5px;
+}
+.createimg{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+.createdivs{
+    width:600px;
+    height:50px;
+    position: absolute;
+    top: 15px;
+    left: 85px;
+}
+
+

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title></title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
-
+    <link href="css\reset.css" rel="stylesheet">
+    <script src="js/xml.js"></script>
 </head>
 <body>
 <div class="total" style="width: 80%;padding-left:10%">
@@ -23,15 +24,81 @@
             </div>
         </div>
         <div id="mine-med">
+        <div class="mine-div">
+            <div id="body">
+            <div class="main">
+                <span>在这里发布属于你的“愿易”吧</span>
+                <span class="tag">你最多可以输入30个字符</span>
+                <textarea id="text" cols="30" rows="10" maxlength="30" class="text"></textarea><br>
+                <input type="button" value="发 表" id="ipt">
+                <div id="txt" >
+                    <div id="yincang" value="fffffffff">
+                        &nbsp;&nbsp;&nbsp;---------------&nbsp;&nbsp;&nbsp;在此开始发布属于你的第一个“愿易”吧&nbsp;&nbsp;&nbsp;---------------
+                    </div>
+
+                </div>
+
+            </div>
+            </div>
+            <script>
+                var ipt = document.getElementById("ipt");
+                var txt = document.getElementById('txt');
+                var textarea = document.getElementById("text");
+                var yincang = document.getElementById("yincang");
+
+                ipt.onclick = function(){
+
+                    var textValue = textarea.value.LTrim();
+                    if(textValue=="")
+                    {
+                        alert("您还没有输入任何东西")
+                    }
+                    else{
+                        textarea.value="";
+                        yincang.value="";
+                        if(textValue.length>0 ){
+                            var divs = document.createElement("div");
+                            var imgs = document.createElement("img");
+                            var ps = document.createElement("p");
+                            var inputs = document.createElement("input");
+                            divs.setAttribute("class","creatediv");
+                            imgs.setAttribute('class',"createimg");
+                            ps.setAttribute("class","createdivs");
+                            inputs.setAttribute("class","createinput");
+                            imgs.src="images/timg.jpg";
+                            inputs.type="button";
+                            inputs.value="删除";
+                            ps.innerHTML=textValue;
+                            divs.appendChild(imgs);
+                            divs.appendChild(ps);
+                            divs.appendChild(inputs);
+                            if(txt.children.length==0){
+                                txt.appendChild(divs);
+                            }else{
+                                txt.insertBefore(divs,get_firstChild(txt))
+                            }
+                            inputs.onclick = function(){
+                                this.parentNode.parentNode.removeChild(this.parentNode)
+
+                            }
+
+                        }
+                    }
+
+                }
+            </script>
+        </div>
+            <br>
+
         <div class="mine-div"></div>
             <br>
         <div class="mine-div"></div>
-            <br>
+            <br><!--
+
         <div class="mine-div"></div>
             <br>
         <div class="mine-div"></div>
-            <br>
-        <div class="mine-div"></div>
+         -->
         </div>
         <div id="mine-right">
             <div id="mine-right-touxiang">
@@ -40,6 +107,13 @@
                 小彭友
                 <br/><br/>
                 信用值：8.0
+                <br/><br/>
+                <input type="button" value="&nbsp;关注&nbsp;">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="&nbsp;消息&nbsp;">
+            </div>
+            <div id="mine-right-xia">
+
             </div>
 
         </div>
@@ -48,7 +122,7 @@
 
     <br/>
 
-        <footer style="text-align:center;color:#808080" id="mine-footer">
+        <footer style="text-align:center;color:#808080;" id="mine-footer">
             <br/>
             客服电话：020-11111111 举报电话：81111111 客服邮箱：yy@yuanyi.com
             <br/>
