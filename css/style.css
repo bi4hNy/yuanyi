@@ -639,7 +639,7 @@ hr {
 {
     border: 2px black solid;
     width: 220px;
-    height: 100px;
+    height: 518px;
     text-align: center;
     font-size: 18px;
 }
@@ -670,6 +670,7 @@ hr {
 {
     float: left;
     margin-left: 250px;
+    margin-top: 300px;
 }
 
 
@@ -890,4 +891,51 @@ span{
     left: 85px;
 }
 
-
+/*“我的”页面的右下角增加的样式*/
+#left {
+    width:215px;
+    border:1px solid #C8C8C8;
+    float:left;
+    margin-left:2px;
+    display:inline;
+    background-color:#F5F5F5;
+}
+#left .title {
+    position:relative;
+    text-indent:25px;
+    color:#000;
+    font-size:14px;
+    font-weight:bold;
+    width:175px;
+    height:25px;
+    margin-left:1px;
+    line-height:25px;
+}
+#left .more {
+    position:absolute;
+    top:10px;
+    left:110px;
+    width:49px;
+    height:12px;
+}
+#leftcontent {
+    width:174px;
+    padding:5px 0 0 12px;
+}
+#leftcontent  p {
+    text-indent:2em;
+    text-decoration:underline;
+    line-height:1.2;
+    padding:3px 10px 0 5px;
+}
+#leftcontent ul {
+    list-style-type:square;
+    padding:12px 0 16px 5px;
+    width:169px;
+    list-style-position:inside;
+}
+#leftcontent li {
+    line-height:2.3;
+    vertical-align:middle;
+    border-bottom:1px dashed #C4C2C2;
+}
