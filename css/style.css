@@ -629,19 +629,22 @@ hr {
 
 #mine-right-touxiang
 {
-    border: 2px black solid;
+    border: 2px #878787 solid;
     width: 220px;
     height: 300px;
     text-align: center;
     font-size: 18px;
+    border-radius: 5px;
 }
 #mine-right-xia
 {
-    border: 2px black solid;
+    border: 2px #878787 solid;
     width: 220px;
     height: 518px;
     text-align: center;
     font-size: 18px;
+    margin-top: 5%;
+    border-radius: 5px;
 }
 #mine-right-touxiang img
 {
@@ -670,7 +673,7 @@ hr {
 {
     float: left;
     margin-left: 250px;
-    margin-top: 300px;
+    margin-top: 37%;
 }
 
 
@@ -938,4 +941,101 @@ span{
     line-height:2.3;
     vertical-align:middle;
     border-bottom:1px dashed #C4C2C2;
+}
+
+
+/*¹Ø×¢²¿·Ö*/
+ul, ol, li {
+    list-style:none;
+}
+input, button {
+    margin:0;
+    font-size:12px;
+    vertical-align:middle;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+a {
+    color:#333;
+    text-decoration:none;
+}
+a:hover {
+    color:#c00;
+    text-decoration:underline;
+}
+.btndiv {
+    width:100%;
+    float:left;
+    height:28px;
+    position:relative;
+}
+.btndiv strong {
+    float:left;
+    padding-left:10px;
+    padding-top:4px;
+}
+a.abtn {
+    display:block;
+    height:22px;
+    width:24px;
+    position:absolute;
+    overflow:hidden;
+    background:url(../images/btn.gif) no-repeat;
+    text-indent:-999em;
+    outline:none;
+}
+a.aleft {
+    right:40px;
+    background-position:0 -32px;
+}
+a.agrayleft {
+    cursor:default;
+    background-position:0 0;
+}
+a.aright {
+    right:10px;
+    background-position:-34px 0;
+}
+a.agrayright {
+    cursor:default;
+    background-position:-34px -32px;
+}
+.uldiv {
+    width:700px;
+    padding:8px;
+    margin-left:-3%;
+    margin-top:5%;
+    position:relative;
+    text-align:center;
+    border:3px dashed #fdfdff;
+    border-radius:5px;
+}
+.scrollcontainer {
+    width:690px;
+    height:460px;
+    overflow:hidden;
+    position:relative;
+    margin:0 auto;
+}
+.scrollcontainer ul {
+    width:20000px;
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+.scrollcontainer li {
+    width:690px;
+    height:460px;
+    float:left;
+}
+.gzbtn {
+    background:url(../images/btngz.gif) no-repeat;
+    margin:0 auto;
+    width:100px;
+    height:30px;
+    display:block;
+    border:none;
+    text-indent:-999em;
 }
