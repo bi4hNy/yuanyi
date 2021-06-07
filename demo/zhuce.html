@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html{
+            width: 100%;
+            height: 100%;
+            overflow:hidden;
+            font-style: sans-serif;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            font-style:'Open Sans',sans-serif;
+            margin: 0;
+            background-color: #edeffa;
+        }
+        #register{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            margin: -200px 0 0 -200px;
+            width: 500px;
+            height:500px;
+        }
+        h1{
+            font-size: 2em;
+            margin: 0.67em 0;
+            color: #313131;
+            letter-spacing: 1px;
+            left:80px;
+            position: relative;
+        }
+        table{
+            width: 500px;
+            margin: 0 auto;
+            font-family: "黑体", "经典繁仿黑", "特粗黑体", "微软雅黑";
+            color: #0066cc;
+            /*border: solid red 1px;*/
+        }
+        tr{
+            margin: 10px;
+            padding-bottom: 10px;
+        }
+        .lefttd{
+            width: 320px;
+            /*border: 1px darkorange solid;
+            line-height:15px ;*/
+        }
+        .righttd{
+            color: orangered;
+        }
+        .txtinput{
+            width: 210px;
+            height:15px;
+            margin-bottom: 10px;
+            outline: none;
+            padding: 10px;
+            font-size: 15px;
+            color: #0a0a0a;
+            font-family: "黑体", "经典繁仿黑", "特粗黑体", "微软雅黑";
+            border-top:1px solid #e5e7f2;
+            border-left:1px solid #e5e7f2;
+            border-right:1px solid #e5e7f2;
+            border-bottom:1px solid #e5e7f2;
+            border-radius: 4px;
+            background-color: #dee0eb;
+        }
+        select option{
+            font-family: "黑体", "经典繁仿黑", "特粗黑体", "微软雅黑";
+            color: #b4ceff;
+        }
+        select{
+            background-color: #dee0eb;
+            color: #0066cc;
+        }
+        .but{
+            width: 100px;
+            min-height: 20px;
+            display: block;
+            background-color: #4A77D4;
+            border: 1px solid #3762bc;
+            color: #fff;
+            padding: 9px 14px;
+            font-size: 15px;
+            line-height: normal;
+            border-radius: 5px;
+        }
+        .lefttd a{
+            font-family: "黑体", "经典繁仿黑", "特粗黑体", "微软雅黑";
+            text-underline: none;
+            color: #0066cc;
+        }
+        .lefttd a:hover{
+            color: #00AA88;
+        }
+    </style>
+    <title>免费注册界面</title>
+    <script src="zhuce.js"></script>
+</head>
+<body>
+    <div id="register">
+      <h1>注册个人信息</h1>
+        <br>
+        <form id="form" method="post" action="add.php">
+        <table>
+            <tr>
+                <td class="lefttd">
+                    新用户名：<input type="text" required  name="user" id="user" class="txtinput" onBlur="nameText()" autofocus />
+                </td>
+                <td class="righttd" id=NY></td>   <!--这里是td用来输出检验的结果-->
+            </tr>
+            <tr>
+                <td class="lefttd">
+                    密&nbsp;&nbsp;&nbsp;&nbsp;码：<input type="password" required  name="password" id="p" class="txtinput" onBlur="passText()" />
+                </td>
+                <td class="righttd" id="PY1"> </td>   <!--这里是td用来输出检验的结果-->
+            </tr>
+            <tr>
+                <td class="lefttd">
+                    确认密码：<input type="password" required  name="password" id="p2" class="txtinput" onFocus="passFocus()" onBlur="passReally()" />
+                </td>
+                <td class="righttd" id="PY2"></td>   <!--这里是td用来输出检验的结果-->
+            </tr>
+            <tr>
+                <td class="lefttd">
+                    出生日期：
+      <select class="address" name="year" id="Y">
+      <option selected="">-</option>
+      <option>2017</option>
+      <option>2016</option>
+      <option>2015</option>
+      <option>2014</option>
+      <option>2013</option>
+      <option>2012</option>
+      <option>2011</option>
+      <option>2010</option>
+      <option>2009</option>
+      <option>2008</option>
+      <option>2007</option>
+      <option>2006</option>
+      <option>2005</option>
+      <option>2004</option>
+      <option>2003</option>
+      <option>2002</option>
+      <option>2001</option>
+      <option>2000</option>
+      <option>1999</option>
+      <option>1998</option>
+      <option>1997</option>
+      <option>1996</option>
+      <option>1995</option>
+      <option>1994</option>
+      <option>1993</option>
+      <option>1992</option>
+      <option>1991</option>
+      <option>1990</option>
+      </select>
+      &nbsp;
+      <select class="address" name="month" id="M">
+      <option selected="">-</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      </select>
+      &nbsp;
+      <select class="address" name="day" id="D">
+      <option selected="">-</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+      <option>10</option>
+      <option>11</option>
+      <option>12</option>
+      <option>13</option>
+      <option>14</option>
+      <option>15</option>
+      <option>16</option>
+      <option>17</option>
+      <option>18</option>
+      <option>19</option>
+      <option>20</option>
+      <option>21</option>
+      <option>22</option>
+      <option>23</option>
+      <option>24</option>
+      <option>25</option>
+      <option>26</option>
+      <option>27</option>
+      <option>28</option>
+      <option>29</option>
+      <option>30</option>
+      <option>31</option>
+      </select>
+                </td>
+                <td class="righttd" id="DY"> </td>
+            </tr>
+      
+  <tr>
+    <td class="lefttd">
+    <br>
+    性&nbsp;&nbsp;&nbsp;&nbsp;别：
+    <input style="width:30px;" id="sex" type="radio" name="sex" value="man" />男&nbsp;
+    <input style="width:30px;" id="sex" type="radio" name="sex" value="woman" />女
+                </td>
+                <td class="righttd" id="SY"> </td>
+            </tr>
+            <tr>
+                <td class="lefttd">
+                <br>
+                    填手机号：<input type="text" required  name="phone" class="txtinput" id="Tell" />
+                </td>
+                <td class="righttd" id="TY"></td>   <!--这里是td用来输出检验的结果-->
+            </tr>
+            <tr>
+                <td >
+                    <input type="button" value="提交" name="sub" style="float: right; cursor:pointer" class="but" onClick="MyTell();QT();Submit()" />
+                    <input type="reset" value="重置"  class="but" style="margin-left: 80px cursor:pointer" />
+                </td>
+            </tr>
+            <tr>
+                <td class="lefttd" style="text-align: right">
+                    <br>
+                    <a href="login.html" style="text-decoration: none">返回登陆界面</a>
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+</html>
